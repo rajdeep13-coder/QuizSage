@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizSage - AI Quiz Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧠 QuizSage</h1>
+      <p class="tagline">Read Less. Learn More. Quiz Smarter.</p>
+    </header>
+
+    <main>
+      <textarea id="articleInput" placeholder="Paste your article or content here..."></textarea>
+
+      <div class="mode-buttons">
+        <button id="summaryBtn">📝 Generate Summary</button>
+        <button id="quizBtn">🧪 Generate Quiz</button>
+      </div>
+
+      <div id="loading" class="hidden">⏳ Processing with AI...</div>
+
+      <section id="summarySection" class="hidden">
+        <h2>📄 AI Summary</h2>
+        <p id="summaryText"></p>
+      </section>
+
+      <section id="quizSection" class="hidden">
+        <h2>📝 Quiz Questions</h2>
+        <div id="quizContainer"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Built by Human | QuizSage</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
