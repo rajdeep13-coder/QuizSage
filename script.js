@@ -65,7 +65,6 @@ quizBtn.addEventListener("click", async () => {
   renderQuiz(result);
 });
 
-// Render quiz questions from plain text
 function renderQuiz(rawText) {
   quizContainer.innerHTML = ""; 
   const questions = rawText.trim().split(/\n\s*\n/); 
@@ -75,12 +74,12 @@ function renderQuiz(rawText) {
     let questionText = lines[0];
     let options = lines.slice(1);
 
-    // If first line is just a number or empty, merge with next line
+    //format update
     if (/^\d+\.$/.test(questionText.trim()) && options.length > 0) {
     questionText = `${questionText} ${options[0]}`;
     options = options.slice(1);
     }
-    // Ensure options are formatted correctly
+    
     options = options.map(opt => opt.trim()).filter(opt => opt.length > 0);
 
 
